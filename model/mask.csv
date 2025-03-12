@@ -1,0 +1,7 @@
+Proton,/home/msoo935/hpc/1H-MRI-segmentation/model/Proton.csv
+inference_niftynet_log,/home/msoo935/hpc/1H-MRI-segmentation/model/inference_niftynet_log
+logs,/home/msoo935/hpc/1H-MRI-segmentation/model/logs
+mask,/home/msoo935/hpc/1H-MRI-segmentation/model/mask.csv
+models,/home/msoo935/hpc/1H-MRI-segmentation/model/models
+results,/home/msoo935/hpc/1H-MRI-segmentation/model/results
+settings_inference,/home/msoo935/hpc/1H-MRI-segmentation/model/settings_inference.txt

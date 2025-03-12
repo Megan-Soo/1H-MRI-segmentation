@@ -1,0 +1,48 @@
+virtual env == python3.7
+pip install tensorflow==1.15.*
+pip install niftynet
+pip install protobuf == 3.20.* (downgrade if package mismatch error)
+
+threads = 2
+gpu = 0
+
+run "net_segment inference -c config_inference.ini"
+
+WARNING:tensorflow:From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/__init__.py:37: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+WARNING:tensorflow:From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/utilities/util_import.py:28: The name tf.logging.fatal is deprecated. Please use tf.compat.v1.logging.fatal instead.
+
+CRITICAL:tensorflow:Optional Python module cv2 not found, please install cv2 and retry if the application fails.
+CRITICAL:tensorflow:Optional Python module skimage.io not found, please install skimage.io and retry if the application fails.
+CRITICAL:tensorflow:Optional Python module SimpleITK not found, please install SimpleITK and retry if the application fails.
+WARNING:tensorflow:From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/io/misc_io.py:739: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+WARNING:tensorflow:From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/io/misc_io.py:864: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/io/misc_io.py:864: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:niftynet: From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/engine/application_variables.py:20: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:niftynet: From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/engine/application_variables.py:21: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+WARNING:niftynet: From /home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/engine/application_variables.py:22: The name tf.summary.image is deprecated. Please use tf.compat.v1.summary.image instead.
+
+INFO:niftynet: Optional Python module yaml not found, please install yaml and retry if the application fails.
+INFO:niftynet: Optional Python module yaml version None not found, please install yaml-None and retry if the application fails.
+INFO:niftynet: Optional Python module SimpleITK not found, please install SimpleITK and retry if the application fails.
+INFO:niftynet: Optional Python module SimpleITK version None not found, please install SimpleITK-None and retry if the application fails.
+NiftyNet version 0.6.0
+INFO:niftynet: Optional Python module yaml not found, please install yaml and retry if the application fails.
+INFO:niftynet: Optional Python module yaml version None not found, please install yaml-None and retry if the application fails.
+Traceback (most recent call last):
+  File "/home/msoo935/hpc/virtual_env/1H-seg/bin/net_segment", line 8, in <module>
+    sys.exit(main())
+  File "/home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/__init__.py", line 84, in main
+    create_new=system_param['SYSTEM'].action == TRAIN)
+  File "/home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages/niftynet/io/misc_io.py", line 605, in resolve_module_dir
+    module_dir_str, module_dir_str, sys.path))
+ValueError: Could not resolve [/home/msoo935/hpc/1H-MRI-segmentation/model].
+Make sure it is a valid folder path or a module name.
+If it is string representing a module, the parent folder of [/home/msoo935/hpc/1H-MRI-segmentation/model] should be on the system path.
+
+Current system path ['/home/msoo935/hpc/virtual_env/1H-seg/bin', '/home/msoo935/niftynet', '/home/msoo935/niftynet/extensions', '/usr/lib/python37.zip', '/usr/lib/python3.7', '/usr/lib/python3.7/lib-dynload', '/home/msoo935/hpc/virtual_env/1H-seg/lib/python3.7/site-packages'].
